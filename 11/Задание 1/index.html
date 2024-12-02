@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #result > div {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <form id="form">
+        <div>
+            <label for="name">Имя пользователя: </label>
+            <input type="text" id="name" required>
+        </div>
+        <div>
+            <label for="email">Email: </label>
+            <input type="email" id="email" required>
+        </div>
+        <div>
+            <label>Пол:</label>
+            <label for="male"><input name="gender" type="radio" id="male" value="Мужской" required> Мужской</label>
+            <label for="female"><input name="gender" type="radio" id="female" value="Женский"> Женский</label>
+        </div>
+        <div>
+            <input type="range" min="1" max="10" id="satisfied">
+        </div>
+        <div id="interests">
+            <label>Интересы пользователя</label>
+            <br>
+            <label for="sport"><input type="checkbox" name="interests" id="sport" value="Спорт"> Спорт</label>
+            <br>
+            <label for="music"><input type="checkbox" name="interests" id="music" value="Музыка"> Музыка</label>
+            <br>
+            <label for="trips"><input type="checkbox" name="interests" id="trips" value="Путешествия"> Путешествия</label>
+            <br>
+            <label for="cinema"><input type="checkbox" name="interests" id="cinema" value="Кино"> Кино</label>
+        </div>
+        <div>
+            <label for="text">Дополнительные комментарии</label>
+            <br>
+            <textarea name="area" id="comment" cols="40" rows="5"></textarea>
+        </div>
+        <button type="submit">Отправить</button>
+    </form>
+    <div id="result">
+        <h2>Результаты опроса</h2>
+        <div>Имя пользователя: <span id="rname"></span></div>
+        <div>Email: <span id="remail"></span></div>
+        <div>Пол: <span id="rgender"></span></div>
+        <div>Оценка сервиса: <span id="rsatisfied"></span></div>
+        <div>Интересы пользователя: <span id="rinterests"></span></div>
+        <div>Дополнительные комментарии: <span id="rcomments"></span></div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>

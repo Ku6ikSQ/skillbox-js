@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Настройка оформления банковской карты</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f4f4f9;
+      }
+      .card-customizer {
+        max-width: 400px;
+        padding: 20px;
+        background-color: #ffffff;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+      h2 {
+        text-align: center;
+        color: #333;
+      }
+      label {
+        display: block;
+        margin-top: 10px;
+      }
+      input[type="text"],
+      select {
+        width: 100%;
+        padding: 8px;
+        margin-top: 5px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+      }
+      #card {
+        margin-top: 20px;
+        padding: 20px;
+        height: 150px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.5em;
+        color: white;
+        border-radius: 8px;
+        transition: background-color 0.3s ease;
+      }
+      input:focus {
+        outline: none;
+        border-color: #007bff;
+        background-color: #f0f8ff;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card-customizer">
+      <h2>Настройте свою карту</h2>
+
+      <label for="cardText">Введите текст для карты:</label>
+      <input type="text" id="cardText" placeholder="Ваш текст здесь" />
+
+      <label for="colorSelect">Выберите цвет карты:</label>
+      <select id="colorSelect">
+        <option value="red">Красный</option>
+        <option value="blue">Синий</option>
+        <option value="green">Зелёный</option>
+      </select>
+
+      <p id="card" style="background-color: red">Пример карты</p>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <title>Склад</title>
+  </head>
+  <body>
+    <div class="warehouse">
+      <div class="header">
+        <h1>Склад</h1>
+        <button class="btn add-btn" id="add-button">Добавить запись</button>
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th class="sortable">Название</th>
+            <th class="sortable">Полка</th>
+            <th class="sortable">Вес</th>
+            <th class="sortable">Время хранения</th>
+            <th>Действие</th>
+          </tr>
+        </thead>
+        <tbody id="table-body"></tbody>
+      </table>
+    </div>
+    <script type="module" src="./js/warehouse.js"></script>
+  </body>
+</html>

@@ -1,0 +1,42 @@
+body {
+    font-family: sans-serif;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 15px;
+}
+
+.btns {
+    margin-bottom: 10px;
+}
+
+.btn {
+    color: #fff;
+    padding: 10px 15px;
+    background-color: #ccc;
+    border: 0;
+    border-radius: 7px;
+    transition: background .2s linear;
+}
+
+.btn-green {
+    background-color: green;
+}
+
+.btn-green:hover {
+    background-color: rgb(4, 172, 4);
+}
+
+.btn-orange {
+    background-color: orange;
+}
+
+.btn-orange:hover {
+    background-color: rgb(255, 181, 44);
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="index.js"></script>
+</head>
+<body>
+    <h1>Поиск минимального и максимального числа</h1>
+    <p class="all-elements"></p>
+    <button class="min">Найти минимальное число</button>
+    <button class="max">Найти максимальное число</button>
+    <p>Минимальное число: <span class="minNumber"></span></p>
+    <p>Максимальное число: <span class="maxNumber"></span></p>
+
+    <script>
+        const numbers = [12, 5, 8, 20, 3, 16]
+        const allElements = document.querySelector('.all-elements')
+        const maxBtn = document.querySelector(".max")
+        const minBtn = document.querySelector(".min")
+        const maxNumberElem = document.querySelector('.maxNumber')
+        const minNumberElem = document.querySelector('.minNumber')
+
+        function findMax(arr) {
+            let max = arr[0];
+            for(let i = 1; i < arr.length; i++) {
+                if(max < arr[i])
+                    max = arr[i]
+            }
+            return max
+        }
+
+        function findMin(arr) {
+            let min = arr[0];
+            for(let i = 1; i < arr.length; i++) {
+                if(min > arr[i])
+                    min = arr[i]
+            }
+            return min
+        }
+
+        for(const num of numbers) {
+            const el = document.createElement('span')
+            el.textContent = num + ', '
+            allElements.appendChild(el);
+        }
+
+        maxBtn.addEventListener("click", () => {
+            maxNumberElem.textContent = findMax(numbers)
+        })
+        minBtn.addEventListener("click", () => {
+            minNumberElem.textContent = findMin(numbers)
+        })
+    </script>
+</body>
+</html>

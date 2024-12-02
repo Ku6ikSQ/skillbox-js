@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const cars = {
+            toyota: {
+                name: 'Toyota Camry',
+                wheels: 4,
+                doors: 4,
+                isStarted: false,
+                hp: 200,
+            },
+            bmw: {
+                name: 'BMW X5',
+                wheels: 4,
+                doors: 5,
+                isStarted: true,
+                hp: 300,
+            },
+            audi: {
+                name: 'Audi A6',
+                wheels: 4,
+                doors: 4,
+                isStarted: false,
+                hp: 250,
+            },
+        }
+        function printCars() {
+            for(const car in cars) {
+                console.log(car)
+            }
+        }
+        printCars()
+    </script>
+</body>
+</html>
